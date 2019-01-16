@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Make It Work"
+date: 2010-03-07 00:00:00 -0500
+categories: music
+permalink: /make-it-work
+redirect_from: /composing/make-it-work
+---
+
+<div class="cover-image">
+  <img src="/assets/images/make-it-work.png" alt="photomontage of New York Public Library's lion statue, the Rose Reading Room, a bookshelf, and logo" width="400">
+</div>
+
+<div class="project-label">
+  <span class="project-label--title">{{ page.title }}</span>,
+  <span class="project-label--date">{{ page.date | date: '%Y' }}</span>
+
+  <div class="project-label--format">
+    Original music
+  </div>
+
+  <div class="project-label--description">
+    Comissioned by the New York Public Library for their employee orientation video, &ldquo;Best of All Possible Libraries&rdquo;
+  </div>
+</div>
+
+{% include playlist.html playlist=site.data.playlists.make-it-work %}

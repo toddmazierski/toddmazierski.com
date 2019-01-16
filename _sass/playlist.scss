@@ -1,0 +1,46 @@
+.playlist {
+  font-weight: 300;
+  border: 1px solid #eee;
+  padding: 7px;
+  border-radius: 3px;
+  display: inline-block;
+  width: 50%;
+  min-width: 300px;
+}
+
+.playlist--title {
+  font-size: smaller;
+  margin-bottom: 5px;
+}
+
+.playlist--controls {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.playlist--nav {
+  font-size: smaller;
+  display: flex;
+}
+
+a.playlist--nav-disabled {
+  color: gray;
+  cursor: default;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.playlist--nav-hidden {
+  display: none;
+}
+
+.playlist--nav-previous {
+  flex: 1;
+}
+
+.playlist--nav-next {
+  flex: 1;
+  text-align: right;
+}

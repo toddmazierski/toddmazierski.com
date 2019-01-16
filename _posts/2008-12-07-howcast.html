@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Howcast"
+date: 2008-12-07 00:00:00 -0500
+categories: music
+permalink: /howcast
+redirect_from: /composing/howcast
+---
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/dPQTbg9_Pvg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="project-label">
+  <span class="project-label--title">{{ page.title }}</span>,
+  <span class="project-label--date">{{ page.date | date: '%Y' }}</span>
+
+  <div class="project-label--format">
+    Original music
+  </div>
+</div>
+
+{% include playlist.html playlist=site.data.playlists.howcast %}

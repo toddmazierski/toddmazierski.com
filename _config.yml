@@ -1,0 +1,13 @@
+title: Todd Mazierski
+baseurl: ""
+url: "http://toddmazierski.com"
+github_username: toddmazierski
+linkedin_username: toddmazierski
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+
+assets_url: https://s3.amazonaws.com/assets.toddmazierski.com

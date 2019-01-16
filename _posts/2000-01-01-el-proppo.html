@@ -1,0 +1,24 @@
+---
+layout: post
+title: "El Proppo"
+date: 2003-01-01 00:00:00 -0500
+categories: music
+permalink: /el-proppo
+redirect_from: /composing/el-proppo/
+---
+
+<div class="cover-image">
+  <img src="/assets/images/el-proppo.png" alt="photomontage of New York Public Library's lion statue, the Rose Reading Room, a bookshelf, and logo"
+    width="400">
+</div>
+
+<div class="project-label">
+  <span class="project-label--title">{{ page.title }}</span>,
+  <span class="project-label--date">{{ page.date | date: '%Y' }}</span>
+
+  <div class="project-label--format">
+    Soundtrack
+  </div>
+</div>
+
+{% include playlist.html playlist=site.data.playlists.el-proppo %}

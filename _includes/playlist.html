@@ -1,0 +1,114 @@
+<div class="playlist">
+  <div class="playlist--title" data-playlist="title"></div>
+  <audio class="playlist--controls" data-playlist="controls" controls preload></audio>
+  <div class="playlist--nav">
+    <a href="" class="playlist--nav-previous playlist--nav-hidden" data-playlist="previous">
+      Previous Track
+    </a>
+    <a href="" class="playlist--nav-next playlist--nav-hidden" data-playlist="next">
+      Next Track
+    </a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var playlist = {{ include.playlist | jsonify }};
+
+  var $title = document.querySelector('[data-playlist=title]');
+  var $controls = document.querySelector('[data-playlist=controls]');
+  var $previous = document.querySelector('[data-playlist=previous]');
+  var $next = document.querySelector('[data-playlist=next]');
+
+  var state = {
+    index: 0,
+    wasPlaying: false
+  };
+
+  function selectTrack(index) {
+    state.index = index;
+    state.wasPlaying = isPlaying();
+
+    setTitle();
+    setAudio();
+    setNav();
+  }
+
+  function getTrack() {
+    return playlist[state.index];
+  }
+
+  function setTitle() {
+    $title.innerHTML = getTrack().title;
+  }
+
+  function setAudio() {
+    $controls.innerHTML = '<source src="{{ site.assets_url }}' + getTrack().path + '" + type="audio/mpeg">';
+    $controls.load();
+  }
+
+  function setNav() {
+    if (isFirstTrack()) {
+      $previous.classList.add('playlist--nav-disabled');
+    } else {
+      $previous.classList.remove('playlist--nav-disabled');
+    }
+
+    if (isLastTrack()) {
+      $next.classList.add('playlist--nav-disabled');
+    } else {
+      $next.classList.remove('playlist--nav-disabled');
+    }
+  }
+
+  function isFirstTrack() {
+    return state.index === 0;
+  }
+
+  function isLastTrack() {
+    return state.index === playlist.length - 1;
+  }
+
+  function isPlaying() {
+    return !$controls.paused && $controls.currentTime > 0 || $controls.ended;
+  }
+
+  function onPrevious(event) {
+    event.preventDefault();
+
+    if (isFirstTrack()) {
+      return false;
+    }
+
+    selectTrack(state.index - 1);
+  }
+
+  function onNext(event) {
+    event.preventDefault();
+
+    if (isLastTrack()) {
+      return false;
+    }
+
+    selectTrack(state.index + 1);
+  }
+
+  function onLoadStart() {
+    if (state.wasPlaying) {
+      this.play();
+    }
+  }
+
+  $previous.addEventListener('click', onPrevious);
+  $next.addEventListener('click', onNext);
+  $controls.addEventListener('loadstart', onLoadStart);
+  $controls.addEventListener('ended', onNext);
+
+  if (playlist.length > 1) {
+    $previous.classList.remove('playlist--nav-hidden');
+    $next.classList.remove('playlist--nav-hidden');
+  }
+
+  selectTrack(0);
+})();
+</script>

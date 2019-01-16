@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Our Feature Presentation"
+date: 2008-12-09 00:00:00 -0500
+categories: music
+permalink: /our-feature-presentation
+redirect_from: /composing/our-feature-presentation
+---
+
+<video controls preload poster="https://s3.amazonaws.com/assets.toddmazierski.com/our-feature-presentation/you-dont-have-to-preview.png">
+  <source src="https://s3.amazonaws.com/assets.toddmazierski.com/our-feature-presentation/you-dont-have-to.mov" type="video/mp4">
+</video>
+
+<div class="project-label">
+  <span class="project-label--title">{{ page.title }}</span>,
+  <span class="project-label--date">{{ page.date | date: '%Y' }}</span>
+
+  <div class="project-label--format">
+    Soundtrack
+  </div>
+
+  <div class="project-label--description">
+    Our Feature Presentation is a feature-length comedy directed by Gardner Loulan and produced by Aunt Colony Productions
+  </div>
+</div>
+
+{% include playlist.html playlist=site.data.playlists.our-feature-presentation %}

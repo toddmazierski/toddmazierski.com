@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Golden Grams"
+date: 2009-05-17 00:00:00 -0500
+categories: music
+permalink: /golden-grams
+redirect_from: /composing/superior-gold-group
+---
+
+<video controls preload poster="https://s3.amazonaws.com/assets.toddmazierski.com/superior-gold-group/college-preview.png">
+  <source src="https://s3.amazonaws.com/assets.toddmazierski.com/superior-gold-group/college.mov" type="video/mp4">
+</video>
+
+<div class="project-label">
+  <span class="project-label--title">{{ page.title }}</span>,
+  <span class="project-label--date">{{ page.date | date: '%Y' }}</span>
+
+  <div class="project-label--format">
+    Original music
+  </div>
+
+  <div class="project-label--description">TV advertisement</div>
+</div>
+
+{% include playlist.html playlist=site.data.playlists.golden-grams %}
