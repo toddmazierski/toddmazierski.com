@@ -3,6 +3,7 @@ baseurl: ""
 url: "https://toddmazierski.com"
 github_username: toddmazierski
 linkedin_username: toddmazierski
+rss: RSS
 
 markdown: kramdown
 theme: minima
