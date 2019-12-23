@@ -1,0 +1,19 @@
+<script>
+(function() {
+  function getRedirect(path) {
+    var redirects = {{ site.data.404_redirect | jsonify }};
+
+    return redirects[path] || null;
+  }
+
+  function redirect() {
+    var path = getRedirect(window.location.pathname);
+
+    if (path !== null) {
+      window.location.replace(path);
+    }
+  }
+
+  redirect();
+})();
+</script>
