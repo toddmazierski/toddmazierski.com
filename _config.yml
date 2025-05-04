@@ -3,6 +3,9 @@ baseurl: ""
 url: "https://toddmazierski.com"
 github_username: toddmazierski
 linkedin_username: toddmazierski
+mastodon:
+    - instance: mastodon.radio
+      username: KE2AEQ
 rss: RSS
 google_site_verification: B5jhZxMLKyQGdUpUIhQ5HApOMBTWwynrVp7T0D5nxuY
 
