@@ -7,6 +7,56 @@
 @import "playlist";
 @import "project-label";
 
+.site-title {
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.site-title, .site-title:visited {
+  color: #393939;
+}
+
+.site-header {
+  background-color: #8A84FF;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-image: url("/assets/images/theme/header.gif");
+  height: 80px;
+  border: 0;
+}
+
+.page-content {
+  background-color: #649228;
+  background-image: url("/assets/images/theme/body.gif");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  padding-bottom: 250px;
+}
+
+.post {
+  background-color: white;
+  padding: 24px;
+  border-radius: 5px;
+}
+
+.site-footer {
+  background-color: black;
+  padding: 20px 0 0;
+  border: 0;
+
+  a {
+    color: white;
+  }
+}
+
+.footer-col-wrapper {
+  color: white;
+}
+
+.footer-col {
+  margin: 0;
+}
+
 .cover-image {
   margin-bottom: 15px;
 }
