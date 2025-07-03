@@ -15,4 +15,4 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
 
-assets_url: https://s3.amazonaws.com/assets.toddmazierski.com
+assets_url: https://files.toddmazierski.com
